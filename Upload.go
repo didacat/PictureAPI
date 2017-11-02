@@ -29,7 +29,7 @@ func main() {
     http.HandleFunc("/upload/", uploadHandle) // 上传
 	http.HandleFunc("/uploaded/", showPicHandle)  //显示图片
 	//port := os.Getenv("PORT")
-    err := http.ListenAndServe("80", nil)
+    err := http.ListenAndServe(":"+os.Getenv("PORT"), nil)
     fmt.Println(err)
 }
  
