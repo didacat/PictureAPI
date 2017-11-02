@@ -28,8 +28,8 @@ const html = `<html>
 func main() {
     http.HandleFunc("/upload/", uploadHandle) // 上传
 	http.HandleFunc("/uploaded/", showPicHandle)  //显示图片
-	port := os.Getenv("PORT")
-    err := http.ListenAndServe(port, nil)
+	//port := os.Getenv("PORT")
+    err := http.ListenAndServe("80", nil)
     fmt.Println(err)
 }
  
