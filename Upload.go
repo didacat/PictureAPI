@@ -27,8 +27,9 @@ const html = `<html>
 </html>`
 func main() {
     http.HandleFunc("/upload/", uploadHandle) // 上传
-    http.HandleFunc("/uploaded/", showPicHandle)  //显示图片
-    err := http.ListenAndServe(":9030", nil)
+	http.HandleFunc("/uploaded/", showPicHandle)  //显示图片
+	port := os.Getenv("PORT")
+    err := http.ListenAndServe(port, nil)
     fmt.Println(err)
 }
  
