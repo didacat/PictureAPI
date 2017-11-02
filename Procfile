@@ -1,2 +1,2 @@
-web: Upload
+web: go-getting-started
 
